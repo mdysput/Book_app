@@ -1,3 +1,8 @@
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<% if @books.count == 0 %>
+  <h3>No books in this category</h3>
+<% end %>
 <% @books.each do |book| %>
-   <h2> <%= link_to book.title, book_path(book) %></h2>
+  <h2> <%= link_to book.title, book_path(book) %></h2>
 <% end %>
